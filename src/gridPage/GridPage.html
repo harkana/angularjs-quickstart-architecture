@@ -1,0 +1,21 @@
+<article>
+    <section>
+     {{ message }}
+    </section>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th ng-repeat="property in gridOptions.properties">{{ property }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in gridOptions.data">
+                    <td>{{ item.firstname }}</td>
+                    <td>{{ item.lastname }}</td>
+                    <td>{{ item.age }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</article>
