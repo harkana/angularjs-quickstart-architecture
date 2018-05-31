@@ -2,7 +2,7 @@ import angular from "angular";
 import "./ExPage.css";
 
 const exPageModule = angular.module("root.exPage", [
-    require("angular-route").name
+    require("angular-route")
 ]);
 
 exPageModule.controller('exController', ($scope) => {
