@@ -26,7 +26,6 @@ const gridController = gridModule.controller('gridCtrl', ($scope) => {
             }
         ]
     };
-
     $scope.message = "Grid Page";
 });
 
