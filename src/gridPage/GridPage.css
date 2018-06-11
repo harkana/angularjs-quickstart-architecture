@@ -1,3 +1,9 @@
-table{
+table,tr,td,th{
     border: 1px solid black;
+    padding: 5px;
+}
+
+tr:nth-child(even)
+{
+    background-color: rgb(130, 130, 130);
 }
