@@ -2,7 +2,7 @@ import angular from "angular";
 import "./GridPage.css";
 
 const gridModule = angular.module('root.gridPage', [
-    require("angular-route")
+    require("@uirouter/angularjs").default
 ]);
 
 const gridController = gridModule.controller('gridCtrl', ($scope) => {
@@ -29,10 +29,12 @@ const gridController = gridModule.controller('gridCtrl', ($scope) => {
     $scope.message = "Grid Page";
 });
 
-gridModule.config(($routeProvider) => {
-    $routeProvider.when("/grid", {
-        template : require("./GridPage.html"),
-        controller : 'gridCtrl' 
+gridModule.config(($stateProvider) => {
+    $stateProvider.state({
+        name: 'grid-page',
+        url: '/grid',
+        template: require("./GridPage.html"),
+        controller: 'gridCtrl'
     });
 });
 

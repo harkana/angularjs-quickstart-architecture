@@ -2,17 +2,19 @@ import angular from "angular";
 import "./ExPage.css";
 
 const exPageModule = angular.module("root.exPage", [
-    require("angular-route")
+    require("@uirouter/angularjs").default
 ]);
 
-exPageModule.controller('exController', ($scope) => {
+exPageModule.controller('exCtrl', ($scope) => {
     $scope.message = "Ex Page";
 });
 
-exPageModule.config(($routeProvider) => {
-    $routeProvider.when('/exPage', {
-        controller : 'exController',
-        template: require("./ExPage.html") 
+exPageModule.config(($stateProvider) => {
+    $stateProvider.state({
+        name: 'ex-page',
+        url: '/ex',
+        template: require("./ExPage.html"),
+        controller: 'exCtrl'
     });
 });
 

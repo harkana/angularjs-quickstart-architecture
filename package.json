@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d dist --source-maps",
+    "build": "webpack",
     "test": "mocha test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.18",
     "angular": "^1.7.0",
-    "angular-route": "^1.7.0",
     "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "css-loader": "^0.28.11",
     "html-loader": "^0.5.5",

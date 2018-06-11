@@ -2,15 +2,15 @@ import angular from "angular";
 import "./App.css";
 
 const root = angular.module("root", [
-    require("angular-route"),
+    require("@uirouter/angularjs").default,
     require("./gridPage/GridPage.js").name,
     require("./exPage/ExPage").name
 ]);
 
-const appCtrl = root.controller('appCtrl', ["$scope", "$location", ($scope, $location) => {
+const appCtrl = root.controller('appCtrl', ["$scope", "$state", ($scope, $state) => {
     $scope.message  = "Hello world - Root Page";
     $scope.page = (name) => {
-        $location.path("/" + name);
+        $state.go(`${name}-page`);
     };
 }]);
 
