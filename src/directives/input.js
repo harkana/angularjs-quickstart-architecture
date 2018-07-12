@@ -17,7 +17,6 @@ appModule.directive('customInput', function () {
         $scope.data = {};
 
         $scope.change = function () {
-            console.log($scope.data);
             ngModel.$setViewValue($scope.data[$scope.field.name]);
         };
     }
