@@ -3,12 +3,13 @@ import "./App.css";
 
 const root = angular.module("root", [
     require("@uirouter/angularjs").default,
+    require("./directives/input").name,
     require("./gridPage/GridPage.js").name,
     require("./exPage/ExPage").name
 ]);
 
 const appCtrl = root.controller('appCtrl', ["$scope", "$state", ($scope, $state) => {
-    $scope.message  = "Hello world - Root Page";
+    $scope.message = "Hello world - Root Page";
     $scope.page = (name) => {
         $state.go(`${name}-page`);
     };
@@ -16,8 +17,8 @@ const appCtrl = root.controller('appCtrl', ["$scope", "$state", ($scope, $state)
 
 appCtrl.directive('app', () => {
     return {
-        template : require("./App.html"),
-        controller : 'appCtrl'
+        template: require("./App.html"),
+        controller: 'appCtrl'
     };
 });
 

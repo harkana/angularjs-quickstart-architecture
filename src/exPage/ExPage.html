@@ -1,3 +1,14 @@
-<section>
+<section ng-init="p={}">
     <p>{{ message }}</p>
+    <div>
+        <label for="prenom">Prenom : </label>
+        <custom-input ng-model="p.prenom" id="prenom" name="prenom" field="{ 'name': 'prenom', 'type': 'text' }"></custom-input>
+    </div>
+    <div>
+        <label for="nom">Nom : </label>
+        <custom-input ng-model="p.nom" id="nom" name="nom" field="{ 'name': 'nom', 'type': 'text' }"></custom-input>
+    </div>
+    <div>
+        <input type="button" value="Test !" ng-click="submit(p)">
+    </div>
 </section>

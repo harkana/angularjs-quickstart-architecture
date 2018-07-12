@@ -1,0 +1,10 @@
+<article>
+    <div>
+        <input type="text" name="{{ field.name }}" id="{{ field.name }}" ng-change="change()" ng-model="data[field.name]" ng-if="field.type === 'text'" />
+        <select name="{{ field.name }}" ng-model="data[field.name]" id="{{ field.name }}" ng-change="change()" ng-if="field.type === 'select'">
+            <option ng-repeat="option in options track by $index" value="{{ $index }}">{{ option }}</option>
+        </select>
+        <input type="checkbox" ng-model="data[field.name]" name="{{ field.name }}" ng-change="change()" id="{{ field.name }}" ng-if="field.type === 'checkbox'"
+        />
+    </div>
+</article>

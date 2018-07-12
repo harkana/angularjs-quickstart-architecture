@@ -7,6 +7,14 @@ const exPageModule = angular.module("root.exPage", [
 
 exPageModule.controller('exCtrl', ($scope) => {
     $scope.message = "Ex Page";
+
+    $scope.submit = function (p) {
+        console.log(p);
+    };
+
+    $scope.change = function () {
+        console.log($scope.info);
+    };
 });
 
 exPageModule.config(($stateProvider) => {
